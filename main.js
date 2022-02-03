@@ -1,0 +1,24 @@
+player_1 = localStorage.getItem("uu1");
+player_2 = localStorage.getItem("uu2");
+document.getElementById("uuu1").innerHTML = player_1 + ":";
+document.getElementById("uuu2").innerHTML = player_2 + ":";
+score_player_1 = 0;
+score_player_2 = 0;
+document.getElementById("score1").innerHTML = score_player_1;
+document.getElementById("score2").innerHTML = score_player_2;
+document.getElementById("question").innerHTML = "question turn" + player_1;
+document.getElementById("player_answer").innerHTML = "answer turn-" + player_2;
+function send(){;
+    answer = document.getElementById("answer").value;
+    answer = answer.toLowerCase();
+    qwerty = answer.charAt(1);
+    qwerty = answer.replace(qwerty, "_");
+    a =qwerty.length;
+    b = Math.floor(a/2);
+    b =  qwerty.charAt(b);
+    b =  qwerty.replace(b, "_");
+    c = b.length - 1;
+    c =  b.charAt(c);
+    c =  b.replace(c, "_");
+    document.getElementById("answer").innerHTML = "";
+}
